@@ -18,7 +18,12 @@ on:
     - cron: '20 17 * * *' # Sets Semgrep to scan every day at 17:20 UTC.
     # It is recommended to change the schedule to a random time.
 
+
 permissions:
+  # required for all workflows
+  security-events: write
+  # only required for workflows in private repositories
+  actions: read
   contents: read
 
 # jobs:
