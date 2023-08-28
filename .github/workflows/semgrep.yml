@@ -12,6 +12,7 @@
 name: Semgrep
 
 on:
+  push:
   workflow_dispatch:
   schedule:
     - cron: '20 17 * * *' # Sets Semgrep to scan every day at 17:20 UTC.
@@ -82,5 +83,5 @@ jobs:
       - name: save report as pipeline artifact
         uses: actions/upload-artifact@v3
         with:
-          name: report.sarif
-          path: ~/report.sarif
+          name: semgrep.sarif
+          path: semgrep.sarif
