@@ -83,4 +83,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: report.sarif
-          path: report.sarif
+          path: ~/report.sarif
